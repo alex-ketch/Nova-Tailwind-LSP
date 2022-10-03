@@ -1,0 +1,15 @@
+{
+  "name": "tailwindcss-lsp.novaextension",
+  "version": "1.0.0",
+  "description": "<!-- 👋 Hello! As Nova users browse the extensions library, a good README can help them understand what your extension does, how it works, and what setup or configuration it may require.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/language-server": "^0.0.9",
+    "nova-extension-utils": "^1.4.0"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "identifier": "co.ketch.TailwindCSSLSP",
+  "name": "TailwindCSS LSP",
+  "organization": "Alex Ketch",
+  "description": "Lorem ipsum, dolor sit amet.",
+  "version": "1.0",
+  "categories": ["completions", "issues", "sidebars", "languages"],
+
+  "main": "main.js",
+
+  "entitlements": {
+    "process": true,
+    "filesystem": "readwrite"
+  },
+
+  "activationEvents": [
+    "onLanguage:postcss",
+    "onLanguage:css",
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:jsx",
+    "onLanguage:tsx",
+    "onWorkspaceContains:tailwind.config.js",
+    "onWorkspaceContains:tailwind.config.cjs"
+  ],
+
+  "config": [
+    {
+      "key": "example.language-server-path",
+      "title": "Language Server Path",
+      "type": "path",
+      "placeholder": "/usr/local/bin/example"
+    }
+  ]
+}
