@@ -22,13 +22,19 @@ const lspPath = nova.path.join(
   "node_modules/@tailwindcss/language-server/bin/tailwindcss-language-server"
 );
 
-exports.activate = function () {
+exports.activate = function() {
   // Do work when the extension is activated
   const projectRoot = nova.workspace.path;
+
+  nova.commands.register("restart", () => {
+    langserver.stop();
+    langserver = new ExampleLanguageServer();
+  });
+
   langserver = new ExampleLanguageServer();
 };
 
-exports.deactivate = function () {
+exports.deactivate = function() {
   // Clean up state before the extension is deactivated
   if (langserver) {
     langserver.deactivate();
@@ -41,7 +47,7 @@ class ExampleLanguageServer {
     // Observe the configuration setting for the server's location, and restart the server on change
     nova.config.observe(
       "example.language-server-path",
-      function (path) {
+      function(path) {
         this.start(path);
       },
       this
@@ -53,6 +59,7 @@ class ExampleLanguageServer {
   }
 
   async start(path) {
+    console.log("Starting");
     if (this.languageClient) {
       this.languageClient.stop();
       nova.subscriptions.remove(this.languageClient);
@@ -69,15 +76,19 @@ class ExampleLanguageServer {
 
     // Create the client
     var serverOptions = {
-      type: "stdio",
-      path: runShPath,
-      env: {
-        TAILWIND_LSP_SERVER: path,
-        WORKDIR: nova.workspace.path || ".",
-      },
+      // type: "stdio",
+      // type: "socket",
+      // path: runShPath,
+      // path: "./node_modules/@tailwindcss/language-server/bin/tailwindcss-language-server",
+      path: lspPath,
+      // env: {
+      //   TAILWIND_LSP_SERVER: path,
+      //   WORKDIR: nova.workspace.path || ".",
+      // },
     };
 
     var clientOptions = {
+      // debug: true,
       syntaxes: [
         "html",
         "javascript",
@@ -87,7 +98,16 @@ class ExampleLanguageServer {
         "css",
         "postcss",
       ],
-      initializationOptions: {},
+      initializationOptions: {
+        // rootPath: projectRoot,
+        colorDecorators: "off",
+        userLanguages: {
+          html: "html",
+          jsx: "javascript",
+          css: "css",
+          postcss: "css",
+        },
+      },
     };
 
     var client = new LanguageClient(
@@ -115,6 +135,7 @@ class ExampleLanguageServer {
   }
 
   stop() {
+    console.log("Stopping");
     if (this.languageClient) {
       this.languageClient.stop();
       nova.subscriptions.remove(this.languageClient);
