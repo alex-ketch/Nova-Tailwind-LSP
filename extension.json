@@ -32,5 +32,14 @@
       "type": "path",
       "placeholder": "/usr/local/bin/example"
     }
-  ]
+  ],
+
+  "commands": {
+    "extensions": [
+      {
+        "title": "Restart Tailwind LSP",
+        "command": "restart"
+      }
+    ]
+  }
 }

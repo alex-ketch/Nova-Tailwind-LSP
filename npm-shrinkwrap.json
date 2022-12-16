@@ -7,16 +7,16 @@
     "": {
       "name": "tailwindcss-lsp.novaextension",
       "version": "1.0.0",
-      "license": "ISC",
+      "license": "MIT",
       "dependencies": {
-        "@tailwindcss/language-server": "^0.0.9",
+        "@tailwindcss/language-server": "^0.0.10",
         "nova-extension-utils": "^1.4.0"
       }
     },
     "node_modules/@tailwindcss/language-server": {
-      "version": "0.0.9",
-      "resolved": "https://registry.npmjs.org/@tailwindcss/language-server/-/language-server-0.0.9.tgz",
-      "integrity": "sha512-x0rvJkO8TmwhJWjBH7z4Qn1SLaaYYtvY8Liw5SnMX62u6QuNZ0R0XU9P7nVQg+x0rxakC8oQgS2+wfYRNUyHgQ==",
+      "version": "0.0.10",
+      "resolved": "https://registry.npmjs.org/@tailwindcss/language-server/-/language-server-0.0.10.tgz",
+      "integrity": "sha512-4rG07stqhws4/UyRLbHDc+plmxDfTOH/w0sLGvK7LoQq4GaaN0Ov8vEqL60ef94am6pp/ZrjIB5qL6kG7DshHA==",
       "bin": {
         "tailwindcss-language-server": "bin/tailwindcss-language-server"
       }
@@ -29,9 +29,9 @@
   },
   "dependencies": {
     "@tailwindcss/language-server": {
-      "version": "0.0.9",
-      "resolved": "https://registry.npmjs.org/@tailwindcss/language-server/-/language-server-0.0.9.tgz",
-      "integrity": "sha512-x0rvJkO8TmwhJWjBH7z4Qn1SLaaYYtvY8Liw5SnMX62u6QuNZ0R0XU9P7nVQg+x0rxakC8oQgS2+wfYRNUyHgQ=="
+      "version": "0.0.10",
+      "resolved": "https://registry.npmjs.org/@tailwindcss/language-server/-/language-server-0.0.10.tgz",
+      "integrity": "sha512-4rG07stqhws4/UyRLbHDc+plmxDfTOH/w0sLGvK7LoQq4GaaN0Ov8vEqL60ef94am6pp/ZrjIB5qL6kG7DshHA=="
     },
     "nova-extension-utils": {
       "version": "1.4.0",
