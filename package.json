@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@tailwindcss/language-server": "^0.0.13",
+    "@tailwindcss/language-server": "^0.0.0-insiders.9ccc34d",
     "nova-extension-utils": "^1.4.0"
   }
 }

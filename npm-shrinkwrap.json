@@ -9,14 +9,14 @@
       "version": "1.0.0",
       "license": "MIT",
       "dependencies": {
-        "@tailwindcss/language-server": "^0.0.13",
+        "@tailwindcss/language-server": "^0.0.0-insiders.9ccc34d",
         "nova-extension-utils": "^1.4.0"
       }
     },
     "node_modules/@tailwindcss/language-server": {
-      "version": "0.0.13",
-      "resolved": "https://registry.npmjs.org/@tailwindcss/language-server/-/language-server-0.0.13.tgz",
-      "integrity": "sha512-C5OKPG8F6IiSbiEgXMxskMsOnbzSGnZvKBxEGHUhBGIB/tlX5rc7Iv/prdwYrUj2Swhjj5TrXuxZgACo+blB4A==",
+      "version": "0.0.0-insiders.9ccc34d",
+      "resolved": "https://registry.npmjs.org/@tailwindcss/language-server/-/language-server-0.0.0-insiders.9ccc34d.tgz",
+      "integrity": "sha512-Lj36c33JA/mQb0/8FyqrZG0aN6dYw858DWe0D16VqvH7BDc/wIaFOrb8+2tcmaHW7Ow3z311CMBE1VEV71dp0w==",
       "bin": {
         "tailwindcss-language-server": "bin/tailwindcss-language-server"
       }
@@ -29,9 +29,9 @@
   },
   "dependencies": {
     "@tailwindcss/language-server": {
-      "version": "0.0.13",
-      "resolved": "https://registry.npmjs.org/@tailwindcss/language-server/-/language-server-0.0.13.tgz",
-      "integrity": "sha512-C5OKPG8F6IiSbiEgXMxskMsOnbzSGnZvKBxEGHUhBGIB/tlX5rc7Iv/prdwYrUj2Swhjj5TrXuxZgACo+blB4A=="
+      "version": "0.0.0-insiders.9ccc34d",
+      "resolved": "https://registry.npmjs.org/@tailwindcss/language-server/-/language-server-0.0.0-insiders.9ccc34d.tgz",
+      "integrity": "sha512-Lj36c33JA/mQb0/8FyqrZG0aN6dYw858DWe0D16VqvH7BDc/wIaFOrb8+2tcmaHW7Ow3z311CMBE1VEV71dp0w=="
     },
     "nova-extension-utils": {
       "version": "1.4.0",
