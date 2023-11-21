@@ -87,8 +87,30 @@ class ExampleLanguageServer {
       // },
     };
 
+    const initializationOptions = {
+      tailwindCSS: {
+        classAttributes: [
+          "class",
+          "className",
+          "class:list",
+          "classList",
+          "ngClass",
+        ],
+        lint: {
+          cssConflict: "warning",
+          invalidApply: "error",
+          invalidConfigPath: "error",
+          invalidScreen: "error",
+          invalidTailwindDirective: "error",
+          invalidVariant: "error",
+          recommendedVariantOrder: "warning",
+        },
+        validate: true,
+      },
+    };
+
     var clientOptions = {
-      // debug: true,
+      debug: true,
       syntaxes: [
         "html",
         "javascript",
@@ -139,6 +161,7 @@ class ExampleLanguageServer {
         "surface",
         "twig",
       ],
+      initializationOptions,
     };
 
     var client = new LanguageClient(
