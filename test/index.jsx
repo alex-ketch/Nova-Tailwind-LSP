@@ -1,1 +1,1 @@
-export const MyComponent = () => <div className="">Hello</div>;
+export const MyComponent = () => <div className="bg-indigo-50  ">Hello</div>;

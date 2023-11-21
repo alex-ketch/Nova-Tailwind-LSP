@@ -22,7 +22,7 @@ const lspPath = nova.path.join(
   "node_modules/@tailwindcss/language-server/bin/tailwindcss-language-server"
 );
 
-exports.activate = function() {
+exports.activate = function () {
   // Do work when the extension is activated
   const projectRoot = nova.workspace.path;
 
@@ -34,7 +34,7 @@ exports.activate = function() {
   langserver = new ExampleLanguageServer();
 };
 
-exports.deactivate = function() {
+exports.deactivate = function () {
   // Clean up state before the extension is deactivated
   if (langserver) {
     langserver.deactivate();
@@ -47,7 +47,7 @@ class ExampleLanguageServer {
     // Observe the configuration setting for the server's location, and restart the server on change
     nova.config.observe(
       "example.language-server-path",
-      function(path) {
+      function (path) {
         this.start(path);
       },
       this
@@ -92,22 +92,53 @@ class ExampleLanguageServer {
       syntaxes: [
         "html",
         "javascript",
+        "javascript",
+        { syntax: "jsx", languageId: "typescript" },
         "typescript",
-        "jsx",
         "tsx",
+        { syntax: "tsx", languageId: "typescript" },
         "css",
         "postcss",
+        "less",
+        "sass",
+        "scss",
+        "stylus",
+        "sugarss",
+        "tailwindcss",
+        "aspnetcorerazor",
+        "astro",
+        "astro-markdown",
+        "blade",
+        "django-html",
+        "edge",
+        "ejs",
+        "erb",
+        "gohtml",
+        "GoHTML",
+        "gohtmltmpl",
+        "haml",
+        "handlebars",
+        "hbs",
+        "html",
+        "HTML (Eex)",
+        "HTML (EEx)",
+        "html-eex",
+        "htmldjango",
+        "jade",
+        "leaf",
+        "liquid",
+        "markdown",
+        "mdx",
+        "mustache",
+        "njk",
+        "nunjucks",
+        "phoenix-heex",
+        "php",
+        "razor",
+        "slim",
+        "surface",
+        "twig",
       ],
-      initializationOptions: {
-        // rootPath: projectRoot,
-        colorDecorators: "off",
-        userLanguages: {
-          html: "html",
-          jsx: "javascript",
-          css: "css",
-          postcss: "css",
-        },
-      },
     };
 
     var client = new LanguageClient(

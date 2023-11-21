@@ -10,7 +10,7 @@
 
   "entitlements": {
     "process": true,
-    "filesystem": "readwrite"
+    "filesystem": "read"
   },
 
   "activationEvents": [
@@ -18,7 +18,9 @@
     "onLanguage:css",
     "onLanguage:html",
     "onLanguage:javascript",
+    "onLanguage:javascriptreact",
     "onLanguage:typescript",
+    "onLanguage:typescriptreact",
     "onLanguage:jsx",
     "onLanguage:tsx",
     "onWorkspaceContains:tailwind.config.js",
